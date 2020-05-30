@@ -36,6 +36,9 @@
             // 
             // lbxSelectedBreakfast
             // 
+            this.lbxSelectedBreakfast.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbxSelectedBreakfast.FormattingEnabled = true;
             this.lbxSelectedBreakfast.Location = new System.Drawing.Point(343, 12);
             this.lbxSelectedBreakfast.Name = "lbxSelectedBreakfast";
