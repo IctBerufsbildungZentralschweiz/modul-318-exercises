@@ -63,7 +63,7 @@
             this.lbxTexts.Location = new System.Drawing.Point(12, 34);
             this.lbxTexts.Name = "lbxTexts";
             this.lbxTexts.Size = new System.Drawing.Size(353, 277);
-            this.lbxTexts.TabIndex = 2;
+            this.lbxTexts.TabIndex = 3;
             // 
             // btnAdd
             // 
@@ -71,7 +71,7 @@
             this.btnAdd.Location = new System.Drawing.Point(290, 6);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 3;
+            this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
