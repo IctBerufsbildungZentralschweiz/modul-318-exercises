@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace M318.Exercises.Nr4_1
+namespace M318.Exercises.Nr4_2
 {
     public partial class BankAccountForm : Form
     {
@@ -23,7 +23,7 @@ namespace M318.Exercises.Nr4_1
         private void DepositButtonClick(object sender, EventArgs e)
         {
             this.balance = balance + amountInput.Value;
-            balanceDisplay.Text = balance.ToString(BalanceFormat);
+            ShowBalanceChange(amountInput.Value);
         }
 
         private void WithdrawButtonClick(object sender, EventArgs e)
@@ -37,7 +37,19 @@ namespace M318.Exercises.Nr4_1
             }
 
             this.balance = newBalance;
+            ShowBalanceChange(-amountInput.Value);
+        }
+
+        private void ShowBalanceChange(decimal balanceChange)
+        {
             balanceDisplay.Text = balance.ToString(BalanceFormat);
+
+            balanceChangesGrid.Rows.Add(new[]
+            {
+                DateTime.Now.ToLongTimeString(),
+                balanceChange.ToString(BalanceFormat),
+                this.balance.ToString(BalanceFormat)
+            });
         }
 
         private void AmountInputChanged(object sender, EventArgs e)
