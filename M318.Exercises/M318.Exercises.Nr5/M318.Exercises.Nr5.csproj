@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StopwatchStatus.cs" />
     <EmbeddedResource Include="StopwatchForm.resx">
       <DependentUpon>StopwatchForm.cs</DependentUpon>
     </EmbeddedResource>
