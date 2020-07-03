@@ -29,38 +29,38 @@ namespace M318.Exercises.Nr2
             InitializeComponent();
         }
 
-        private void BreakfastForm_Load(object sender, EventArgs e)
+        private void BreakfastFormLoad(object sender, EventArgs e)
         {
-            cbxBreakfastOptions.Items.AddRange(possibleIngredients);
-            btnAdd.Enabled = false;
-            btnRemove.Enabled = false;
+            breakfastOptionsComboBox.Items.AddRange(possibleIngredients);
+            addButton.Enabled = false;
+            removeButton.Enabled = false;
         }
 
-        private void cbxBreakfastOptions_SelectedIndexChanged(object sender, EventArgs e)
+        private void BreakfastOptionsSelectedIndexChanged(object sender, EventArgs e)
         {
-            btnAdd.Enabled = cbxBreakfastOptions.SelectedItem != null;
+            addButton.Enabled = breakfastOptionsComboBox.SelectedItem != null;
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void AddButtonClicked(object sender, EventArgs e)
         {
-            lbxSelectedBreakfast.Items.Add(cbxBreakfastOptions.SelectedItem);
-            cbxBreakfastOptions.Items.Remove(cbxBreakfastOptions.SelectedItem);
-            btnAdd.Enabled = false;
+            selectedBreakfastList.Items.Add(breakfastOptionsComboBox.SelectedItem);
+            breakfastOptionsComboBox.Items.Remove(breakfastOptionsComboBox.SelectedItem);
+            addButton.Enabled = false;
         }
 
-        private void lbxSelectedBreakfast_SelectedIndexChanged(object sender, EventArgs e)
+        private void SelectedBreakfastSelectedIndexChanged(object sender, EventArgs e)
         {
-            btnRemove.Enabled = lbxSelectedBreakfast.SelectedItem != null;
+            removeButton.Enabled = selectedBreakfastList.SelectedItem != null;
         }
 
-        private void btnRemove_Click(object sender, EventArgs e)
+        private void RemoveButtonClicked(object sender, EventArgs e)
         {
             RemoveCurrentFromSelected();
         }
 
-        private void lbxSelectedBreakfast_DoubleClick(object sender, EventArgs e)
+        private void SelectedBreakfastDoubleClick(object sender, EventArgs e)
         {
-            if (lbxSelectedBreakfast.SelectedItem != null)
+            if (selectedBreakfastList.SelectedItem != null)
             {
                 RemoveCurrentFromSelected();
             }
@@ -68,8 +68,8 @@ namespace M318.Exercises.Nr2
 
         private void RemoveCurrentFromSelected()
         {
-            cbxBreakfastOptions.Items.Add(lbxSelectedBreakfast.SelectedItem);
-            lbxSelectedBreakfast.Items.Remove(lbxSelectedBreakfast.SelectedItem);
+            breakfastOptionsComboBox.Items.Add(selectedBreakfastList.SelectedItem);
+            selectedBreakfastList.Items.Remove(selectedBreakfastList.SelectedItem);
         }
     }
 }

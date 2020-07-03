@@ -49,7 +49,7 @@
     <Compile Include="ListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include=".Designer.cs">
+    <Compile Include="ListForm.Designer.cs">
       <DependentUpon>ListForm.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>

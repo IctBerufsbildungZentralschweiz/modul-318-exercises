@@ -16,60 +16,60 @@ namespace M318.Exercises.Nr3
             InitializeComponent();
         }
 
-        private void btnShowResultSimple_Click(object sender, EventArgs e)
+        private void ShowResultSimpleClicked(object sender, EventArgs e)
         {
             // Finde den Fehler
 
             var message = "Selected:\n";
-            if (rbtOption11.Checked)
+            if (radioButtonOption11.Checked)
             {
-                message += rbtOption11.Text + "\n";
+                message += radioButtonOption11.Text + "\n";
             }
-            if (rbtOption12.Checked)
+            if (radioButtonOption12.Checked)
             {
-                message += rbtOption12.Text + "\n";
+                message += radioButtonOption12.Text + "\n";
             }
-            if (rbtOption13.Checked)
+            if (radioButtonOption13.Checked)
             {
-                message += rbtOption13.Text + "\n";
-            }
-
-            if (rbtOption21.Checked)
-            {
-                message += rbtOption21.Text + "\n";
-            }
-            if (rbtOption22.Checked)
-            {
-                message += rbtOption22.Text + "\n";
-            }
-            if (rbtOption23.Checked)
-            {
-                message += rbtOption22.Text + "\n";
+                message += radioButtonOption13.Text + "\n";
             }
 
-            if (chbFirst.Checked)
+            if (radioButtonOption22.Checked)
             {
-                message += chbFirst.Text + "\n";
+                message += radioButtonOption22.Text + "\n";
             }
-            if (chbSecond.Checked)
+            if (radioButtonOption21.Checked)
             {
-                message += chbSecond.Text + "\n";
+                message += radioButtonOption21.Text + "\n";
             }
-            if (chbThird.Checked)
+            if (radioButtonOption23.Checked)
             {
-                message += chbThird.Text + "\n";
+                message += radioButtonOption21.Text + "\n";
+            }
+
+            if (firstCheckBox.Checked)
+            {
+                message += firstCheckBox.Text + "\n";
+            }
+            if (secondCheckBox.Checked)
+            {
+                message += secondCheckBox.Text + "\n";
+            }
+            if (thirdCheckBox.Checked)
+            {
+                message += thirdCheckBox.Text + "\n";
             }
 
             MessageBox.Show(message);
         }
 
-        private void btnShowResultAdvanced_Click(object sender, EventArgs e)
+        private void ShowResultAdvancedClicked(object sender, EventArgs e)
         {
             var message = "Selected:\n";
-            message += FindSelectedRadioButton(gbxRadioButtons1);
-            message += FindSelectedRadioButton(gbxRadioButtons2);
+            message += FindSelectedRadioButton(radioButtonsBox1);
+            message += FindSelectedRadioButton(radioButtonsBox2);
 
-            foreach (var checkBox in gbxCheckBoxes.Controls.OfType<CheckBox>().ToList())
+            foreach (var checkBox in checkBoxesGroup.Controls.OfType<CheckBox>().ToList())
             {
                 if (checkBox.Checked)
                 {

@@ -17,16 +17,16 @@ namespace M318.Exercises.Nr1
             InitializeComponent();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void AddButtonClick(object sender, EventArgs e)
         {
-            var text = $"{lbxTexts.Items.Count + 1}: {txbText.Text}";
-            lbxTexts.Items.Add(text);
-            txbText.Text = "";
+            var text = $"{textsList.Items.Count + 1}: {textInput.Text}";
+            textsList.Items.Add(text);
+            textInput.Text = "";
         }
 
-        private void txbText_TextChanged(object sender, EventArgs e)
+        private void TextInputChanged(object sender, EventArgs e)
         {
-            btnAdd.Enabled = txbText.Text.Length > 0;
+            addButton.Enabled = textInput.Text.Length > 0;
         }
     }
 }

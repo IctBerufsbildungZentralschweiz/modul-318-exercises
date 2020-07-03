@@ -28,77 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbxSelectedBreakfast = new System.Windows.Forms.ListBox();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.cbxBreakfastOptions = new System.Windows.Forms.ComboBox();
+            this.selectedBreakfastList = new System.Windows.Forms.ListBox();
+            this.removeButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.breakfastOptionsComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lbxSelectedBreakfast
             // 
-            this.lbxSelectedBreakfast.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.selectedBreakfastList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbxSelectedBreakfast.FormattingEnabled = true;
-            this.lbxSelectedBreakfast.Location = new System.Drawing.Point(343, 12);
-            this.lbxSelectedBreakfast.Name = "lbxSelectedBreakfast";
-            this.lbxSelectedBreakfast.Size = new System.Drawing.Size(250, 199);
-            this.lbxSelectedBreakfast.TabIndex = 7;
-            this.lbxSelectedBreakfast.SelectedIndexChanged += new System.EventHandler(this.lbxSelectedBreakfast_SelectedIndexChanged);
-            this.lbxSelectedBreakfast.DoubleClick += new System.EventHandler(this.lbxSelectedBreakfast_DoubleClick);
+            this.selectedBreakfastList.FormattingEnabled = true;
+            this.selectedBreakfastList.Location = new System.Drawing.Point(343, 12);
+            this.selectedBreakfastList.Name = "lbxSelectedBreakfast";
+            this.selectedBreakfastList.Size = new System.Drawing.Size(250, 199);
+            this.selectedBreakfastList.TabIndex = 7;
+            this.selectedBreakfastList.SelectedIndexChanged += new System.EventHandler(this.SelectedBreakfastSelectedIndexChanged);
+            this.selectedBreakfastList.DoubleClick += new System.EventHandler(this.SelectedBreakfastDoubleClick);
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(269, 39);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(68, 23);
-            this.btnRemove.TabIndex = 6;
-            this.btnRemove.Text = "<<";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.removeButton.Location = new System.Drawing.Point(269, 39);
+            this.removeButton.Name = "btnRemove";
+            this.removeButton.Size = new System.Drawing.Size(68, 23);
+            this.removeButton.TabIndex = 6;
+            this.removeButton.Text = "<<";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.RemoveButtonClicked);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(269, 10);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(68, 23);
-            this.btnAdd.TabIndex = 5;
-            this.btnAdd.Text = ">>";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.addButton.Location = new System.Drawing.Point(269, 10);
+            this.addButton.Name = "btnAdd";
+            this.addButton.Size = new System.Drawing.Size(68, 23);
+            this.addButton.TabIndex = 5;
+            this.addButton.Text = ">>";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.AddButtonClicked);
             // 
             // cbxBreakfastOptions
             // 
-            this.cbxBreakfastOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxBreakfastOptions.FormattingEnabled = true;
-            this.cbxBreakfastOptions.Location = new System.Drawing.Point(13, 12);
-            this.cbxBreakfastOptions.Name = "cbxBreakfastOptions";
-            this.cbxBreakfastOptions.Size = new System.Drawing.Size(250, 21);
-            this.cbxBreakfastOptions.TabIndex = 4;
-            this.cbxBreakfastOptions.SelectedIndexChanged += new System.EventHandler(this.cbxBreakfastOptions_SelectedIndexChanged);
+            this.breakfastOptionsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.breakfastOptionsComboBox.FormattingEnabled = true;
+            this.breakfastOptionsComboBox.Location = new System.Drawing.Point(13, 12);
+            this.breakfastOptionsComboBox.Name = "cbxBreakfastOptions";
+            this.breakfastOptionsComboBox.Size = new System.Drawing.Size(250, 21);
+            this.breakfastOptionsComboBox.TabIndex = 4;
+            this.breakfastOptionsComboBox.SelectedIndexChanged += new System.EventHandler(this.BreakfastOptionsSelectedIndexChanged);
             // 
             // BreakfastForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 223);
-            this.Controls.Add(this.lbxSelectedBreakfast);
-            this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.cbxBreakfastOptions);
+            this.Controls.Add(this.selectedBreakfastList);
+            this.Controls.Add(this.removeButton);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.breakfastOptionsComboBox);
             this.Name = "BreakfastForm";
             this.Text = "M318 - Zmorge";
-            this.Load += new System.EventHandler(this.BreakfastForm_Load);
+            this.Load += new System.EventHandler(this.BreakfastFormLoad);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox lbxSelectedBreakfast;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.ComboBox cbxBreakfastOptions;
+        private System.Windows.Forms.ListBox selectedBreakfastList;
+        private System.Windows.Forms.Button removeButton;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.ComboBox breakfastOptionsComboBox;
     }
 }
 
