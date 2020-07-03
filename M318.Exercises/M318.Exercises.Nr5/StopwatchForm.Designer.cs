@@ -45,7 +45,7 @@
             this.timeDisplay.Location = new System.Drawing.Point(12, 12);
             this.timeDisplay.Name = "timeDisplay";
             this.timeDisplay.ReadOnly = true;
-            this.timeDisplay.Size = new System.Drawing.Size(284, 53);
+            this.timeDisplay.Size = new System.Drawing.Size(304, 53);
             this.timeDisplay.TabIndex = 0;
             this.timeDisplay.Text = "00:00:00";
             this.timeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -63,7 +63,8 @@
             // lapResetButton
             // 
             this.lapResetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lapResetButton.Location = new System.Drawing.Point(196, 71);
+            this.lapResetButton.Enabled = false;
+            this.lapResetButton.Location = new System.Drawing.Point(216, 71);
             this.lapResetButton.Name = "lapResetButton";
             this.lapResetButton.Size = new System.Drawing.Size(100, 23);
             this.lapResetButton.TabIndex = 2;
@@ -79,7 +80,7 @@
             this.lapList.FormattingEnabled = true;
             this.lapList.Location = new System.Drawing.Point(12, 100);
             this.lapList.Name = "lapList";
-            this.lapList.Size = new System.Drawing.Size(284, 342);
+            this.lapList.Size = new System.Drawing.Size(304, 342);
             this.lapList.TabIndex = 3;
             // 
             // refreshTimer
@@ -91,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 454);
+            this.ClientSize = new System.Drawing.Size(328, 455);
             this.Controls.Add(this.lapList);
             this.Controls.Add(this.lapResetButton);
             this.Controls.Add(this.startStopButton);
