@@ -87,7 +87,7 @@
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.breakfastOptionsComboBox);
             this.Name = "BreakfastForm";
-            this.Text = "M318 - Excercise 2 - Zmorge";
+            this.Text = "M318 - Exercise 2 - Zmorge";
             this.Load += new System.EventHandler(this.BreakfastFormLoad);
             this.ResumeLayout(false);
 

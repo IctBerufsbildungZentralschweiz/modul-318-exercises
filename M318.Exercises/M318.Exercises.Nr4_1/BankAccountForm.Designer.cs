@@ -114,7 +114,7 @@
             this.Controls.Add(this.depositButton);
             this.Controls.Add(this.amountLabel);
             this.Name = "BankAccountForm";
-            this.Text = "M318 - Excercise 4 - Bank Account";
+            this.Text = "M318 - Exercise 4 - Bank Account";
             ((System.ComponentModel.ISupportInitialize)(this.amountInput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
