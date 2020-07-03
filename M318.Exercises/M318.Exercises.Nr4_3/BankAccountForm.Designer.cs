@@ -1,4 +1,4 @@
-﻿namespace M318.Exercises.Nr4_2
+﻿namespace M318.Exercises.Nr4_3
 {
     partial class BankAccountForm
     {
