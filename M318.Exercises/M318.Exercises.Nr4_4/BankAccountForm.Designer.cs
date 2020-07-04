@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.amountLabel = new System.Windows.Forms.Label();
             this.depositButton = new System.Windows.Forms.Button();
             this.withdrawButton = new System.Windows.Forms.Button();
@@ -125,18 +128,30 @@
             // 
             // timeColumn
             // 
+            this.timeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.timeColumn.DataPropertyName = "Time";
+            dataGridViewCellStyle1.Format = "HH:mm:ss";
+            this.timeColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.timeColumn.HeaderText = "Time";
             this.timeColumn.Name = "timeColumn";
             this.timeColumn.ReadOnly = true;
             // 
             // balanceChangeColumn
             // 
+            this.balanceChangeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.balanceChangeColumn.DataPropertyName = "BalanceChange";
+            dataGridViewCellStyle2.Format = "0.00";
+            this.balanceChangeColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.balanceChangeColumn.HeaderText = "Change";
             this.balanceChangeColumn.Name = "balanceChangeColumn";
             this.balanceChangeColumn.ReadOnly = true;
             // 
             // newBalanceColumn
             // 
+            this.newBalanceColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.newBalanceColumn.DataPropertyName = "NewBalance";
+            dataGridViewCellStyle3.Format = "0.00";
+            this.newBalanceColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.newBalanceColumn.HeaderText = "NewBalance";
             this.newBalanceColumn.Name = "newBalanceColumn";
             this.newBalanceColumn.ReadOnly = true;

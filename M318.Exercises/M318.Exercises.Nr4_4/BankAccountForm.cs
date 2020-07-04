@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace M318.Exercises.Nr4_4
@@ -8,6 +9,8 @@ namespace M318.Exercises.Nr4_4
         private readonly BankAccount bankAccount = new BankAccount();
         private const string BalanceFormat = "0.00";
 
+        private BindingList<BalanceChangelogEntry> balanceChangelogEntries = new BindingList<BalanceChangelogEntry>();
+
         public BankAccountForm()
         {
             InitializeComponent();
@@ -15,6 +18,8 @@ namespace M318.Exercises.Nr4_4
 
         private void BankAccountFormLoad(object sender, EventArgs e)
         {
+            balanceChangesGrid.DataSource = balanceChangelogEntries;
+
             if (bankAccount.LoadBalanceFromFile())
             {
                 ShowBalance();
@@ -52,11 +57,11 @@ namespace M318.Exercises.Nr4_4
         private void ShowBalanceChange(decimal balanceChange)
         {
             ShowBalance();
-            balanceChangesGrid.Rows.Add(new[]
+            balanceChangelogEntries.Add(new BalanceChangelogEntry
             {
-                DateTime.Now.ToLongTimeString(),
-                balanceChange.ToString(BalanceFormat),
-                bankAccount.Balance.ToString(BalanceFormat)
+                BalanceChange = balanceChange,
+                NewBalance = bankAccount.Balance,
+                Time = DateTime.Now
             });
         }
 

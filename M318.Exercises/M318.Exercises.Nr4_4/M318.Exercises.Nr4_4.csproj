@@ -53,6 +53,7 @@
     <Compile Include="BankAccountForm.Designer.cs">
       <DependentUpon>BankAccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BalanceChangelogEntry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BankAccountForm.resx">
