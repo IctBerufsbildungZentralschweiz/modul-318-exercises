@@ -1,15 +1,15 @@
-﻿using System;
-using System.ComponentModel;
-using System.Windows.Forms;
-
-namespace M318.Exercises.Nr4_4
+﻿namespace M318.Exercises.Nr4_4
 {
+    using System;
+    using System.ComponentModel;
+    using System.Windows.Forms;
+
     public partial class BankAccountForm : Form
     {
-        private readonly BankAccount bankAccount = new BankAccount();
         private const string BalanceFormat = "0.00";
+        private readonly BankAccount bankAccount = new BankAccount();
 
-        private BindingList<BalanceChangelogEntry> balanceChangelogEntries = new BindingList<BalanceChangelogEntry>();
+        private readonly BindingList<BalanceChangelogEntry> balanceChangelogEntries = new BindingList<BalanceChangelogEntry>();
 
         public BankAccountForm()
         {

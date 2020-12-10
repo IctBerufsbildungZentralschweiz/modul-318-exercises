@@ -1,12 +1,12 @@
-﻿using System;
-using System.Windows.Forms;
-
-namespace M318.Exercises.Nr4_3
+﻿namespace M318.Exercises.Nr4_3
 {
+    using System;
+    using System.Windows.Forms;
+
     public partial class BankAccountForm : Form
     {
-        private readonly BankAccount bankAccount = new BankAccount();
         private const string BalanceFormat = "0.00";
+        private readonly BankAccount bankAccount = new BankAccount();
 
         public BankAccountForm()
         {
@@ -41,7 +41,7 @@ namespace M318.Exercises.Nr4_3
         {
             balanceDisplay.Text = bankAccount.Balance.ToString(BalanceFormat);
 
-            balanceChangesGrid.Rows.Add(new[]
+            balanceChangesGrid.Rows.Add(new object[]
             {
                 DateTime.Now.ToLongTimeString(),
                 balanceChange.ToString(BalanceFormat),

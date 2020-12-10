@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-namespace M318.Exercises.Nr3
+﻿namespace M318.Exercises.Nr3
 {
+    using System;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public partial class GroupBoxesForm : Form
     {
         public GroupBoxesForm()
@@ -19,16 +14,17 @@ namespace M318.Exercises.Nr3
         private void ShowResultSimpleClicked(object sender, EventArgs e)
         {
             // Finde den Fehler
-
             var message = "Selected:\n";
             if (radioButtonOption11.Checked)
             {
                 message += radioButtonOption11.Text + "\n";
             }
+
             if (radioButtonOption12.Checked)
             {
                 message += radioButtonOption12.Text + "\n";
             }
+
             if (radioButtonOption13.Checked)
             {
                 message += radioButtonOption13.Text + "\n";
@@ -38,10 +34,12 @@ namespace M318.Exercises.Nr3
             {
                 message += radioButtonOption22.Text + "\n";
             }
+
             if (radioButtonOption21.Checked)
             {
                 message += radioButtonOption21.Text + "\n";
             }
+
             if (radioButtonOption23.Checked)
             {
                 message += radioButtonOption21.Text + "\n";
@@ -51,10 +49,12 @@ namespace M318.Exercises.Nr3
             {
                 message += firstCheckBox.Text + "\n";
             }
+
             if (secondCheckBox.Checked)
             {
                 message += secondCheckBox.Text + "\n";
             }
+
             if (thirdCheckBox.Checked)
             {
                 message += thirdCheckBox.Text + "\n";
@@ -90,7 +90,7 @@ namespace M318.Exercises.Nr3
                 }
             }
 
-            return "";
+            return string.Empty;
         }
     }
 }

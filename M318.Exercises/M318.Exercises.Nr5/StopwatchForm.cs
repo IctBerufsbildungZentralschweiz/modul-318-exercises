@@ -1,25 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-
-namespace M318.Exercises.Nr5
+﻿namespace M318.Exercises.Nr5
 {
+    using System;
+    using System.Windows.Forms;
+
     public partial class StopwatchForm : Form
     {
+        private const string TimeFormat = "mm':'ss'.'ff";
+
         private StopwatchStatus status = StopwatchStatus.Initial;
 
         private DateTime lapStartTime;
         private TimeSpan previousRunningTime;
         private TimeSpan previousLapTime;
-
-        private const string TimeFormat = "mm':'ss'.'ff";
 
         public StopwatchForm()
         {
@@ -42,8 +34,6 @@ namespace M318.Exercises.Nr5
                     StartTimer();
                     SetStatus(StopwatchStatus.Running);
                     break;
-                default:
-                    break;
             }
         }
 
@@ -57,8 +47,6 @@ namespace M318.Exercises.Nr5
                 case StopwatchStatus.Stopped:
                     Reset();
                     SetStatus(StopwatchStatus.Initial);
-                    break;
-                default:
                     break;
             }
         }
@@ -122,8 +110,6 @@ namespace M318.Exercises.Nr5
                     startStopButton.Text = "Continue";
                     lapResetButton.Text = "Reset";
                     lapResetButton.Enabled = true;
-                    break;
-                default:
                     break;
             }
         }

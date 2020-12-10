@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace M318.Exercises.Nr4_2
+﻿namespace M318.Exercises.Nr4_2
 {
+    using System;
+    using System.Windows.Forms;
+
     public partial class BankAccountForm : Form
     {
-        private decimal balance = 0;
         private const string BalanceFormat = "0.00";
+        private decimal balance;
 
         public BankAccountForm()
         {
@@ -36,7 +29,7 @@ namespace M318.Exercises.Nr4_2
                 return;
             }
 
-            this.balance = newBalance;
+            balance = newBalance;
             ShowBalanceChange(-amountInput.Value);
         }
 
@@ -44,11 +37,11 @@ namespace M318.Exercises.Nr4_2
         {
             balanceDisplay.Text = balance.ToString(BalanceFormat);
 
-            balanceChangesGrid.Rows.Add(new[]
+            balanceChangesGrid.Rows.Add(new object[]
             {
                 DateTime.Now.ToLongTimeString(),
                 balanceChange.ToString(BalanceFormat),
-                this.balance.ToString(BalanceFormat)
+                balance.ToString(BalanceFormat)
             });
         }
 
